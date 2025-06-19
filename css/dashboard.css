@@ -1,0 +1,162 @@
+
+/* Main Content */
+main.app-main {
+  grid-area: main;
+  padding: 1.5rem 2rem 3rem;
+  min-height: calc(100vh - 60px);
+  transition: margin-left 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  background: transparent;
+}
+
+
+/* Summary Cards */
+.summary-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 1.5rem;
+}
+.summary-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 1.25rem 1.75rem;
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  box-shadow: 0 4px 10px rgb(0 0 0 / 0.08);
+  transition: box-shadow 0.3s ease;
+}
+.summary-card:hover {
+  box-shadow: 0 6px 18px rgb(0 0 0 / 0.18);
+}
+.summary-icon {
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+}
+.icon-students {
+  background-color: #d8d6ff;
+  color: #7c46ff;
+}
+.icon-courses {
+  background-color: #c8facc;
+  color: #2d9c01;
+}
+.summary-text {
+  display: flex;
+  flex-direction: column;
+}
+.summary-text .label {
+  font-size: 0.875rem;
+  color: #777;
+  margin-bottom: 0.25rem;
+}
+.summary-text .value {
+  font-weight: 700;
+  font-size: 1.3rem;
+  color: #222;
+}
+
+/* Bottom content layout */
+.bottom-content {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 2rem;
+}
+@media (max-width: 1023px) {
+  .bottom-content {
+    grid-template-columns: 1fr;
+  }
+}
+.panel {
+  background: white;
+  border-radius: 16px;
+  padding: 1.8rem 2rem;
+  box-shadow: 0 4px 10px rgb(0 0 0 / 0.08);
+}
+.panel h3 {
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  font-size: 1.25rem;
+  color: #111;
+}
+
+/* Calendar Section */
+.calendar-section {
+  background: #fff;
+  border-radius: 16px;
+  padding: 1.5rem 2rem;
+  box-shadow: 0 4px 10px rgb(0 0 0 / 0.08);
+  margin-top: 2rem;
+}
+.calendar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+.nav-btn {
+  background: transparent;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #333;
+  transition: color 0.2s ease;
+}
+.nav-btn:hover {
+  color: #4a6cf7;
+}
+.nav-btn:focus {
+  outline: 2px solid #4a6cf7;
+  outline-offset: 2px;
+}
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 0.5rem;
+  text-align: center;
+}
+.calendar-day-name {
+  font-weight: 600;
+  color: #444;
+}
+.calendar-day {
+  background: #f0f2f5;
+  padding: 0.75rem 0;
+  border-radius: 8px;
+  font-weight: 500;
+  transition: background-color 0.2s ease;
+}
+.calendar-day:hover:not(.today):not(.empty) {
+  background-color: #e0e7ff;
+  cursor: pointer;
+}
+.calendar-day.empty {
+  background: transparent;
+  pointer-events: none;
+}
+.calendar-day.today {
+  background-color: #4a6cf7;
+  color: white;
+  font-weight: bold;
+}
+/* Spacing between dashboard sections */
+.welcome-banner {
+  margin-bottom: 2rem;
+}
+
+.summary-cards {
+  margin-bottom: 2rem;
+}
+
+.calendar-section {
+  margin-bottom: 2rem;
+}
+
+

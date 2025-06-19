@@ -1,0 +1,35 @@
+/* Header */
+header.app-header {
+  grid-area: header;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1.5rem;
+  border-bottom: 1px solid #ddd;
+  position: sticky;
+  top: 0;
+  z-index: 900;
+  height: 60px;
+}
+
+/* Left header info */
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.header-left h2 {
+  font-weight: 700;
+  font-size: 1.25rem;
+  user-select: none;
+  color: #111;
+}
+
+@media (min-width: 768px) {
+  .hamburger-btn {
+    display: none;
+  }
+}
+
